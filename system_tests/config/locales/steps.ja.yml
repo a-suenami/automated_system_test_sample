@@ -1,0 +1,7 @@
+ja:
+  steps:
+    visit_page: ':page_nameにアクセスする'
+    display_text: ':textと表示される'
+    click_link: ':targetリンクをクリックする'
+    click_button: ':targetボタンをクリックする'
+    fill_in_text: ':targetに:contentと入力する'

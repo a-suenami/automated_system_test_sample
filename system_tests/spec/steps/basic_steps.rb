@@ -1,23 +1,31 @@
-step 'visit :page_name' do |page_name|
-  page_name_and_paths = {
+page_name_and_paths = {
+  en: {
     'todo list page' => '/todos'
+  },
+  ja: {
+    'Todoリストページ' => '/todos'
   }
-  path = page_name_and_paths[page_name] || '/'
-  visit path
-end
+}
 
-step 'display :text' do |text|
-  expect(page).to have_content text
-end
+I18n.available_locales.each do |locale|
+  step I18n.t(:visit_page, scope: 'steps', locale: locale) do |page_name|
+    path = page_name_and_paths[locale][page_name] || '/'
+    visit path
+  end
 
-step 'click link :target' do |target|
-  click_link target
-end
+  step I18n.t(:display_text, scope: 'steps', locale: locale) do |text|
+    expect(page).to have_content text
+  end
 
-step 'click button :target' do |target|
-  click_button target
-end
+  step I18n.t(:click_link, scope: 'steps', locale: locale) do |target|
+    click_link target
+  end
 
-step 'fill in :target with :content' do |target, content|
-  fill_in target, with: content
+  step I18n.t(:click_button, scope: 'steps', locale: locale) do |target|
+    click_button target
+  end
+
+  step I18n.t(:fill_in_text, scope: 'steps', locale: locale) do |target, content|
+    fill_in target, with: content
+  end
 end
