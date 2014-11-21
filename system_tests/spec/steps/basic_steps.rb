@@ -1,15 +1,6 @@
-page_name_and_paths = {
-  en: {
-    'todo list page' => '/todos'
-  },
-  ja: {
-    'Todoリストページ' => '/todos'
-  }
-}
-
 I18n.available_locales.each do |locale|
   step I18n.t(:visit_page, scope: 'steps', locale: locale) do |page_name|
-    path = page_name_and_paths[locale][page_name] || '/'
+    path = $pages[locale][page_name] || '/'
     visit path
   end
 
