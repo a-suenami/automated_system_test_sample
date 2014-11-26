@@ -1,11 +1,11 @@
 Feature: Todo list
 
   Scenario: Display todo list page
-    When visit "todo list page"
+    When open "Todo list" page
     Then display "Listing todos"
 
   Scenario: Register new todo
-    When visit "todo list page"
+    When open "Todo list" page
     And click link "New Todo"
     And fill in "Content" with "This is new todo."
     And click button "Create Todo"

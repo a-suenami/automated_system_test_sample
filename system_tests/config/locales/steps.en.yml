@@ -1,6 +1,6 @@
 en:
   steps:
-    visit_page: 'visit :page_name'
+    open_the_page: 'open :page_name page'
     display_text: 'display :text'
     click_link: 'click link :target'
     click_button: 'click button :target'

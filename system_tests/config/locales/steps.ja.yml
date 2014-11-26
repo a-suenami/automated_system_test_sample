@@ -1,6 +1,6 @@
 ja:
   steps:
-    visit_page: ':page_nameにアクセスする'
+    open_the_page: ':page_nameページを開く'
     display_text: ':textと表示される'
     click_link: ':targetリンクをクリックする'
     click_button: ':targetボタンをクリックする'
