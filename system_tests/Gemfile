@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'capybara'
+gem 'guard-rspec'
+gem 'i18n'
 gem 'rspec'
 gem 'selenium-webdriver'
-gem 'capybara'
 gem 'turnip'
-gem 'i18n'
-gem 'guard-rspec'
