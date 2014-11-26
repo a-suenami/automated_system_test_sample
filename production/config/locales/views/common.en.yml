@@ -1,0 +1,6 @@
+en:
+  helpers:
+    submit:
+      todo:
+        create: "Create %{model}"
+        update: "Update %{model}"

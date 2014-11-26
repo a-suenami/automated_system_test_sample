@@ -1,0 +1,14 @@
+en:
+  todos:
+    index:
+      links:
+        new: 'New Todo'
+    show:
+      links:
+        edit: 'Edit'
+        back: 'Back'
+
+  messages:
+    todo:
+      create: 'Todo was successfully created.'
+      update: 'Todo was successfully updated.'

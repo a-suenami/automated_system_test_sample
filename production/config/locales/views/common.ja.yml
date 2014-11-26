@@ -1,0 +1,6 @@
+ja:
+  helpers:
+    submit:
+      todo:
+        create: "%{model}登録"
+        update: "%{model}更新"

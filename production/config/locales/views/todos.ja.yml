@@ -1,0 +1,14 @@
+ja:
+  todos:
+    index:
+      links:
+        new: '新規作成'
+    show:
+      links:
+        edit: '編集'
+        back: '一覧へ戻る'
+
+  messages:
+    todo:
+      create: '新しいTodoを登録しました。'
+      update: 'Todoを更新しました。'
