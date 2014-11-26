@@ -6,10 +6,10 @@ Feature: Todo list
 
   Scenario: Register new todo
     When open "Todo list" page
-    And click link "New Todo"
+    And click "New Todo" link
     And fill in "Content" with "This is new todo."
-    And click button "Create Todo"
+    And click "Create Todo" button
     Then display "Todo was successfully created."
     And display "This is new todo."
-    When click link "Back"
+    When click "Back" link
     Then display "This is new todo."

@@ -2,6 +2,6 @@ en:
   steps:
     open_the_page: 'open :page_name page'
     display_text: 'display :text'
-    click_link: 'click link :target'
-    click_button: 'click button :target'
+    click_link: 'click :target link'
+    click_button: 'click :target button'
     fill_in_text: 'fill in :target with :content'
