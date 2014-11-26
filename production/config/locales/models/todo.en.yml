@@ -1,0 +1,8 @@
+en:
+  activerecord:
+    models:
+      todo: 'Todo'
+    attributes:
+      todo:
+        content: 'Content'
+        due_date: 'Due date'
