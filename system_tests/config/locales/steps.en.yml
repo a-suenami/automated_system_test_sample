@@ -1,11 +1,40 @@
 en:
   steps:
-    open_the_page: 'open :page_name page'
-    display_text: 'display :text'
-    click_link: 'click :target link'
-    click_button: 'click :target button'
-    fill_in_text: 'fill in :target with :content'
-    select_from_select_box: 'select :option from :target select box'
-    select_from_radio_button: 'select :option from :target radio buttons'
-    check: 'check :target'
-    multiple_check: 'check :options from :target check boxes'
+    open_the_page:
+      description: 'open :page_name page'
+
+    display_text:
+      description: 'display :text'
+
+    click_link:
+      description: 'click :target link'
+
+    click_button:
+      description: 'click :target button'
+
+    fill_in_text:
+      description: 'fill in :target with :content'
+      args_order:
+        - :target
+        - :content
+
+    select_from_select_box:
+      description: 'select :option from :target select box'
+      args_order:
+        - :option
+        - :target
+
+    select_from_radio_button:
+      description: 'select :option from :target radio buttons'
+      args_order:
+        - :option
+        - :target
+
+    check:
+      description: 'check :target'
+
+    multiple_check:
+      description: 'check :options from :target check boxes'
+      args_order:
+        - :options
+        - :target

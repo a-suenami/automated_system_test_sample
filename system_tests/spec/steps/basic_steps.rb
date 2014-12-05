@@ -1,5 +1,5 @@
 I18n.available_locales.each do |locale|
-  step I18n.t(:open_the_page, scope: 'steps', locale: locale) do |page_name|
+  step I18n.t('open_the_page.description', scope: 'steps', locale: locale) do |page_name|
     path = $pages[locale][page_name]
     if path.nil?
       raise StandardError.new("Undefined page: #{page_name}")
@@ -18,37 +18,42 @@ I18n.available_locales.each do |locale|
     end
   end
 
-  step I18n.t(:display_text, scope: 'steps', locale: locale) do |text|
+  step I18n.t('display_text.description', scope: 'steps', locale: locale) do |text|
     expect(page).to have_content text
   end
 
-  step I18n.t(:click_link, scope: 'steps', locale: locale) do |target|
+  step I18n.t('click_link.description', scope: 'steps', locale: locale) do |target|
     click_link target
   end
 
-  step I18n.t(:click_button, scope: 'steps', locale: locale) do |target|
+  step I18n.t('click_button.description', scope: 'steps', locale: locale) do |target|
     click_button target
   end
 
-  step I18n.t(:fill_in_text, scope: 'steps', locale: locale) do |target, content|
+  step I18n.t('fill_in_text.description', scope: 'steps', locale: locale) do |target, content|
     fill_in target, with: content
   end
 
-  step I18n.t(:select_from_select_box, scope: 'steps', locale: locale) do |option, target|
-    select option, from: target
+  step I18n.t('select_from_select_box.description', scope: 'steps', locale: locale) do |arg1, arg2|
+    args_order = I18n.t('select_from_select_box.args_order', scope: 'steps', locale: locale)
+
+    args_order.reduce({}) do ||
+    end
+
+    select arg1, from: arg2
   end
 
-  step I18n.t(:select_from_radio_button, scope: 'steps', locale: locale) do |option, target|
+  step I18n.t('select_from_radio_button.description', scope: 'steps', locale: locale) do |option, target|
     within_fieldset target do
       choose option
     end
   end
 
-  step I18n.t(:check, scope: 'steps', locale: locale) do |target|
+  step I18n.t('check.description', scope: 'steps', locale: locale) do |target|
     check target
   end
 
-  step I18n.t(:multiple_check, scope: 'steps', locale: locale) do |options, target|
+  step I18n.t('multiple_check.description', scope: 'steps', locale: locale) do |options, target|
     within_fieldset target do
       options.split(',').map(&:strip).each do |option|
         check option

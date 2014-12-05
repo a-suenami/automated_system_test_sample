@@ -1,7 +1,34 @@
 ja:
   steps:
-    open_the_page: ':page_nameページを開く'
-    display_text: ':textと表示される'
-    click_link: ':targetリンクをクリックする'
-    click_button: ':targetボタンをクリックする'
-    fill_in_text: ':targetに:contentと入力する'
+    open_the_page:
+      description: ':page_nameページを開く'
+
+    display_text:
+      description: ':textと表示される'
+
+    click_link:
+      description: ':targetリンクをクリックする'
+
+    click_button:
+      description: ':targetボタンをクリックする'
+
+    fill_in_text:
+      description: ':targetに:contentと入力する'
+      args_order:
+        - :target
+        - :content
+
+    select_from_select_box:
+      description: ':targetプルダウンから:optionを選択する'
+      args_order:
+        - :target
+        - :option
+
+    select_from_radio_buttons:
+      description: ':targetラジオボタンから:optionを選択する'
+
+    check:
+      description: ':targetをチェックする'
+
+    multiple_check:
+      description: ':targetチェックボックスから:optionsを選択してチェックする'
