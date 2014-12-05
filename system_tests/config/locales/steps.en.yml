@@ -5,3 +5,7 @@ en:
     click_link: 'click :target link'
     click_button: 'click :target button'
     fill_in_text: 'fill in :target with :content'
+    select_from_select_box: 'select :option from :target select box'
+    select_from_radio_button: 'select :option from :target radio buttons'
+    check: 'check :target'
+    multiple_check: 'check :options from :target check boxes'

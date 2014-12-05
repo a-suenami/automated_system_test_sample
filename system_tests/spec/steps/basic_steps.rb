@@ -33,4 +33,26 @@ I18n.available_locales.each do |locale|
   step I18n.t(:fill_in_text, scope: 'steps', locale: locale) do |target, content|
     fill_in target, with: content
   end
+
+  step I18n.t(:select_from_select_box, scope: 'steps', locale: locale) do |option, target|
+    select option, from: target
+  end
+
+  step I18n.t(:select_from_radio_button, scope: 'steps', locale: locale) do |option, target|
+    within_fieldset target do
+      choose option
+    end
+  end
+
+  step I18n.t(:check, scope: 'steps', locale: locale) do |target|
+    check target
+  end
+
+  step I18n.t(:multiple_check, scope: 'steps', locale: locale) do |options, target|
+    within_fieldset target do
+      options.split(',').map(&:strip).each do |option|
+        check option
+      end
+    end
+  end
 end
