@@ -16,8 +16,23 @@
     <%= f.text_field :content %>
   </div>
   <div class="field">
+    <%= f.label :category %><br>
+    <%= f.collection_radio_buttons :category, Category.all, :id, :name %><br>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br>
+    <%= f.collection_select :priority, Priority.all, :id, :name %>
+  </div>
+  <div class="field">
+    <%= f.label :tags %><br>
+    <%= f.collection_check_boxes :tags, Tag.all, :id, :name %><br>
+  </div>
+  <div class="field">
     <%= f.label :due_date %><br>
     <%= f.date_select :due_date %>
+  </div>
+  <div class="field">
+    <%= f.check_box :alert %><%= f.label :alert %>
   </div>
   <div class="actions">
     <%= f.submit %>

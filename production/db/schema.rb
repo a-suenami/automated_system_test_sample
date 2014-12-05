@@ -11,13 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120080710) do
+ActiveRecord::Schema.define(version: 20141130003934) do
+
+  create_table "categories", force: true do |t|
+    t.string "name", default: "", null: false
+  end
+
+  create_table "priorities", force: true do |t|
+    t.string "name", default: "", null: false
+  end
+
+  create_table "tags", force: true do |t|
+    t.string "name", default: "", null: false
+  end
+
+  create_table "todo_tags", force: true do |t|
+    t.integer "todo_id", default: 0, null: false
+    t.integer "tag_id",  default: 0, null: false
+  end
 
   create_table "todos", force: true do |t|
     t.string   "content"
     t.date     "due_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "category_id", default: 0,     null: false
+    t.integer  "priority_id", default: 0,     null: false
+    t.boolean  "alert",       default: false, null: false
   end
 
 end
